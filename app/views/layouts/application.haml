@@ -1,0 +1,19 @@
+!!!5
+%html
+  %head
+    = csrf_meta_tags
+
+    %meta{charset: "UTF-8"}
+
+    %title= "Simple Chat"
+
+    = stylesheet_link_tag "main"
+
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    = javascript_include_tag "jquery-ujs"
+
+  %body
+    != yield
+
+    = javascript_include_tag "mnlib.websocket"
+    = javascript_include_tag "chat"

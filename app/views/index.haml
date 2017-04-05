@@ -1,0 +1,20 @@
+.content
+  #chat-log-base.hide
+    .chat-log
+      .header
+        .name
+        .time
+      .message
+
+  %p 名前
+  %p
+    %input#chat-name{name: "name"}
+
+  %p テキスト
+  %p
+    %textarea#chat-message{name: "message"}
+
+  %p
+    = submit_tag "送信", id: "chat-send"
+
+  #chat-logs
